@@ -8,7 +8,6 @@ import Loading from './loading/Loading';
 import ScrollToTop from './components/scroll/ScrollToTop';
 
 const App: React.FC = () => {
-  const [setActivePage] = useState('About');
   const [theme, setTheme] = useState('light');
   const [loading, setLoading] = useState(true);
 
