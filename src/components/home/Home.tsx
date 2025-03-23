@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Button, Modal } from 'react-bootstrap';
+import { Row, Col, Button, Modal, Card } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import profileImage from './profile.png';
 import './Home.css';
@@ -7,20 +7,21 @@ import About from '../about/About';
 import Contact from '../contact/Contact';
 import Projects from '../projects/Projects';
 import Experiences from '../experience/Experiences';
+import Testimonies from '../testimonies/Testimonies';
 import projects from './project-data';
 
 interface HomeProps {
-    activePage: string;
     theme: string;
     topRef: React.RefObject<HTMLDivElement | null>;
     aboutRef: React.RefObject<HTMLDivElement | null>;
     projectsRef: React.RefObject<HTMLDivElement | null>;
     experiencesRef: React.RefObject<HTMLDivElement | null>;
     contactRef: React.RefObject<HTMLDivElement | null>;
+    testimoniesRef: React.RefObject<HTMLDivElement | null>;
     scrollToSection: (section: string) => void;
 }
 
-const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, experiencesRef, contactRef, scrollToSection }) => {
+const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, experiencesRef, contactRef, testimoniesRef, scrollToSection }) => {
     const [show, setShow] = useState(false);
     const [modalContent, setModalContent] = useState<{ title: string; description: string; imageUrl: string[] } | null>(null);
     const [filter, setFilter] = useState('All');
@@ -34,84 +35,75 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
 
     const handleClose = () => setShow(false);
 
-    const handleNextImage = () => {
-        if (modalContent) {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % modalContent.imageUrl.length);
-        }
+    const handlePrevImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? modalContent!.imageUrl.length - 1 : prevIndex - 1));
     };
 
-    const handlePrevImage = () => {
-        if (modalContent) {
-            setCurrentImageIndex((prevIndex) => (prevIndex - 1 + modalContent.imageUrl.length) % modalContent.imageUrl.length);
-        }
+    const handleNextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex === modalContent!.imageUrl.length - 1 ? 0 : prevIndex + 1));
     };
 
     return (
         <>
-            <div className={`welcome-container`}>
-                <Row className={`my-4 top-section animated-background ${theme}`} ref={topRef}>
+            <div className={`welcome-container ${theme}`} ref={topRef}>
+                <Row className="my-4 top-section animated-background">
                     <Col md={6} className="text-section">
                         <h1 className="fade-in">Hi There!</h1>
-                        <p className="fade-in delay-1">I'm <span className="highlight-name">Cefriandy Simarmata</span>,
-                            a Backend Java Developer with extensive experience for over 5 years.</p>
-                        <div className="button-group fade-in delay-2">
-                            <button className="btn btn-secondary" onClick={() => scrollToSection('Contact')}>Hire Me</button>
-                            <button className="btn btn-secondary" onClick={() => scrollToSection('Projects')}>View Work</button>
+                        <div className="fade-in delay-1">
+                            <h2 className="typewriter">I'm Cefriandy Simarmata</h2>
+                        </div>
+                        <p className="fade-in delay-2">
+                            A Backend Java Developer. Passionate about crafting high-performance backend systems with Java, Spring Boot, and PostgreSQL.
+                        </p>
+                        <div className="button-group fade-in delay-3">
+                            <Button variant="outline-primary" onClick={() => scrollToSection('Contact')}>Hire Me</Button>
+                            <Button variant="outline-primary" onClick={() => scrollToSection('Projects')}>View Work</Button>
                         </div>
                     </Col>
                     <Col md={6} className="image-section">
-                        <img src={profileImage} alt="my profile" className="img-fluid profile-picture slide-in" />
+                        <img src={profileImage} alt="My Profile" className="img-fluid profile-picture enhanced-image" />
+                    </Col>
+                </Row>
+                <Row className="highlights-section fade-in">
+                    <Col md={3}>
+                        <Card className="highlight-card">
+                            <Card.Body>
+                                <h4>5+ Years Experience</h4>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={3}>
+                        <Card className="highlight-card">
+                            <Card.Body>
+                                <h4>15+ Scalable APIs</h4>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={3}>
+                        <Card className="highlight-card">
+                            <Card.Body>
+                                <h4>Expert in Java, Spring Boot</h4>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={3}>
+                        <Card className="highlight-card">
+                            <Card.Body>
+                                <h4>Worked with Top Companies</h4>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
             </div>
-            <div className={`home-container ${theme}`}>
-                <Row className="my-4" ref={aboutRef}>
-                    <Col>
-                        <About />
-                    </Col>
-                </Row>
-                <Row className="my-4" ref={projectsRef}>
-                    <Col>
-                        <Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} />
-                    </Col>
-                </Row>
-                <Row className="my-4" ref={experiencesRef}>
-                    <Col>
-                        <Experiences />
-                    </Col>
-                </Row>
-                <Row className="my-4" ref={contactRef}>
-                    <Col>
-                        <Contact />
-                    </Col>
-                </Row>
 
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>{modalContent?.title}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Row>
-                            <Col md={6}>
-                                <img src={modalContent?.imageUrl[currentImageIndex]} alt={modalContent?.title} className="modal-image" />
-                                <div className="image-navigation">
-                                    <Button variant="secondary" onClick={handlePrevImage}>&lt;</Button>
-                                    <Button variant="secondary" onClick={handleNextImage}>&gt;</Button>
-                                </div>
-                            </Col>
-                            <Col md={6}>
-                                <h4>{modalContent?.title}</h4>
-                                <p>{modalContent?.description}</p>
-                            </Col>
-                        </Row>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+            <div className={`home-container ${theme}`}>
+                <Row className="my-4" ref={aboutRef}><Col><About /></Col></Row>
+                <Row className="my-4" ref={projectsRef}><Col><Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} /></Col></Row>
+                <Row className="my-4" ref={experiencesRef}><Col><Experiences /></Col></Row>
+                <Row className="my-4" ref={contactRef}><Col><Contact /></Col></Row>
+                <Row className="my-4" ref={testimoniesRef}><Col><Testimonies /></Col></Row>
             </div>
+
             <div className={`bottom-container ${theme}`}>
                 <Row className="my-4">
                     <Col>
@@ -161,6 +153,34 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                     </Col>
                 </Row>
             </div>
+
+            {modalContent && (
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{modalContent?.title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Row>
+                            <Col md={6}>
+                                <img src={modalContent?.imageUrl[currentImageIndex]} alt={modalContent?.title} className="modal-image" />
+                                <div className="image-navigation">
+                                    <Button variant="secondary" onClick={handlePrevImage}>&lt;</Button>
+                                    <Button variant="secondary" onClick={handleNextImage}>&gt;</Button>
+                                </div>
+                            </Col>
+                            <Col md={6}>
+                                <h4>{modalContent?.title}</h4>
+                                <p>{modalContent?.description}</p>
+                            </Col>
+                        </Row>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            )}
         </>
     );
 };

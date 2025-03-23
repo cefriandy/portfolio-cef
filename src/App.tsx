@@ -8,7 +8,7 @@ import Loading from './loading/Loading';
 import ScrollToTop from './components/scroll/ScrollToTop';
 
 const App: React.FC = () => {
-  const [activePage, setActivePage] = useState('About');
+  const [setActivePage] = useState('About');
   const [theme, setTheme] = useState('light');
   const [loading, setLoading] = useState(true);
 
@@ -17,6 +17,7 @@ const App: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const testimoniesRef = useRef<HTMLDivElement>(null);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -40,6 +41,9 @@ const App: React.FC = () => {
         break;
       case 'Contact':
         element = contactRef.current;
+        break;
+      case 'Testimonies':
+        element = testimoniesRef.current;
         break;
       case 'About':
       default:
@@ -72,16 +76,16 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <Header setActivePage={setActivePage} toggleTheme={toggleTheme} theme={theme} scrollToSection={scrollToSection} />
+      <Header toggleTheme={toggleTheme} theme={theme} scrollToSection={scrollToSection} />
       <div className={`App ${theme}`}>
         <Home
-          activePage={activePage}
           theme={theme}
           topRef={topRef}
           aboutRef={aboutRef}
           projectsRef={projectsRef}
           experiencesRef={experiencesRef}
           contactRef={contactRef}
+          testimoniesRef={testimoniesRef}
           scrollToSection={scrollToSection}
         />
         <ScrollToTop />

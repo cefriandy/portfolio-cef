@@ -7,17 +7,15 @@ import './Header.css';
 import CLogo from '../../assets/CLogo.png';
 
 interface HeaderProps {
-  setActivePage: (page: string) => void;
   toggleTheme: () => void;
   theme: string;
   scrollToSection: (section: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ setActivePage, toggleTheme, theme, scrollToSection }) => {
+const Header: React.FC<HeaderProps> = ({ toggleTheme, theme, scrollToSection }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleNavClick = (page: string, section: string) => {
-    setActivePage(page);
+  const handleNavClick = (section: string) => {
     setExpanded(false);
     setTimeout(() => {
       scrollToSection(section);
@@ -37,19 +35,19 @@ const Header: React.FC<HeaderProps> = ({ setActivePage, toggleTheme, theme, scro
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link as={NavLink} to="/" end onClick={() => handleNavClick('Home', 'Home')} className="nav-link">
+          <Nav.Link as={NavLink} to="/" end onClick={() => handleNavClick('Home')} className="nav-link">
             <h5>Home</h5>
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/about" onClick={() => handleNavClick('About', 'About')} className="nav-link">
+          <Nav.Link as={NavLink} to="/about" onClick={() => handleNavClick('About')} className="nav-link">
             <h5>About</h5>
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/projects" onClick={() => handleNavClick('Projects', 'Projects')} className="nav-link">
+          <Nav.Link as={NavLink} to="/projects" onClick={() => handleNavClick('Projects')} className="nav-link">
             <h5>Projects</h5>
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/experience" onClick={() => handleNavClick('Experiences', 'Experiences')} className="nav-link">
+          <Nav.Link as={NavLink} to="/experience" onClick={() => handleNavClick('Experiences',)} className="nav-link">
             <h5>Experiences</h5>
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/contact" onClick={() => handleNavClick('Contact', 'Contact')} className="nav-link">
+          <Nav.Link as={NavLink} to="/contact" onClick={() => handleNavClick('Contact',)} className="nav-link">
             <h5>Contact</h5>
           </Nav.Link>
           <div className="theme-switch-button">
