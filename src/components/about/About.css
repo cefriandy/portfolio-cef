@@ -1,0 +1,23 @@
+.about {
+    text-align: center;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #357755;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.resume-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

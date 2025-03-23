@@ -1,0 +1,18 @@
+.project-image {
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.image-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
