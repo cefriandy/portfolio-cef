@@ -20,7 +20,7 @@ interface HomeProps {
     scrollToSection: (section: string) => void;
 }
 
-const Home: React.FC<HomeProps> = ({ activePage, theme, topRef, aboutRef, projectsRef, experiencesRef, contactRef, scrollToSection }) => {
+const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, experiencesRef, contactRef, scrollToSection }) => {
     const [show, setShow] = useState(false);
     const [modalContent, setModalContent] = useState<{ title: string; description: string; imageUrl: string[] } | null>(null);
     const [filter, setFilter] = useState('All');
