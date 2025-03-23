@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ setActivePage, toggleTheme, theme, scro
 
   return (
     <Navbar bg={theme === 'dark' ? 'dark' : 'light'} variant={theme === 'dark' ? 'dark' : 'light'} expand="lg" className={`header-navbar sticky-top ${theme === 'dark' ? 'dark' : ''}`} expanded={expanded}>
-      <Navbar.Brand href="/" className="ml-3 brand-padding">
+      <Navbar.Brand href="/portfolio-cef/" className="ml-3 brand-padding">
         <img src={CLogo} alt="Logo" className="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
