@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
-import CLogo from '../assets/CLogo.png';
+import CLogo from '../../assets/CLogo.png';
 
 interface HeaderProps {
   setActivePage: (page: string) => void;

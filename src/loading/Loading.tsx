@@ -1,5 +1,5 @@
 import React from 'react';
-import CLogo from '../components/assets/CLogo.png';
+import CLogo from '../assets/CLogo.png';
 import './Loading.css';
 
 const Loading: React.FC = () => {

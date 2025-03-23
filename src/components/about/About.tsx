@@ -6,7 +6,7 @@ import './About.css';
 
 const About: React.FC = () => {
     const handleViewResume = () => {
-        window.open('/my-resume.pdf', '_blank');
+        window.open('/portfolio-cef/my-resume.pdf', '_blank');
     };
     
     return (

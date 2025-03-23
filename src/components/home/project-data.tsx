@@ -1,7 +1,7 @@
-import epkhImage from '../assets/epkh.png';
-import ceriaImage from '../assets/ceria.png';
-import pruforceWebImage from '../assets/pruforce-web.png';
-import pruforceMobileImage from '../assets/pruforce-mobile.png';
+import epkhImage from '../../assets/epkh.png';
+import ceriaImage from '../../assets/ceria.png';
+import pruforceWebImage from '../../assets/pruforce-web.png';
+import pruforceMobileImage from '../../assets/pruforce-mobile.png';
 
 const projects = [
     {
