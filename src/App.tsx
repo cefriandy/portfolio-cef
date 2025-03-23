@@ -71,7 +71,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <Router>
+    <Router basename="/portfolio-cef">
       <Header setActivePage={setActivePage} toggleTheme={toggleTheme} theme={theme} scrollToSection={scrollToSection} />
       <div className={`App ${theme}`}>
         <Home
