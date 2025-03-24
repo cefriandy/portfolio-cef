@@ -5,7 +5,7 @@
 }
 
 .text-section {
-    color: rgb(192, 169, 39);
+    color: rgb(88, 210, 43);
     text-shadow: 1px 1px 2px rgb(156, 156, 156);
     text-align: left;
     animation: fade-in 1s ease-out;
@@ -254,27 +254,24 @@
 
 .typewriter {
     overflow: hidden;
-    border-right: .15em solid orange;
     white-space: nowrap;
     letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-    text-align: left; /* Ensure text starts from the left */
-    margin: 0; /* Remove auto margin */
+    text-align: left;
+    margin: 0;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+.cursor {
+    border-left: .15em solid orange;
+    animation: blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to {
+
+    from,
+    to {
         border-color: transparent;
     }
+
     50% {
         border-color: orange;
     }

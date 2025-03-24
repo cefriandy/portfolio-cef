@@ -9,6 +9,7 @@ import Projects from '../projects/Projects';
 import Experiences from '../experience/Experiences';
 import Testimonies from '../testimonies/Testimonies';
 import projects from './project-data';
+import Typewriter from '../util/Typewritter';
 
 interface HomeProps {
     theme: string;
@@ -50,10 +51,10 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                     <Col md={6} className="text-section">
                         <h1 className="fade-in">Hi There!</h1>
                         <div className="fade-in delay-1">
-                            <h2 className="typewriter">I'm Cefriandy Simarmata</h2>
+                            <Typewriter texts={["I'm Cefriandy Simarmata", "A Backend Java Developer"]} />
                         </div>
                         <p className="fade-in delay-2">
-                            A Backend Java Developer. Passionate about crafting high-performance backend systems with Java, Spring Boot, and PostgreSQL.
+                            Passionate about crafting high-performance backend systems with Java, Spring Boot, and PostgreSQL.
                         </p>
                         <div className="button-group fade-in delay-3">
                             <Button variant="outline-primary" onClick={() => scrollToSection('Contact')}>Hire Me</Button>
