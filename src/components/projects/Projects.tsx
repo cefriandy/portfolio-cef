@@ -8,13 +8,13 @@ interface ProjectProps {
     setFilter: (filter: string) => void;
     projects: Array<{ title: string; description: string; imageUrl: string[]; category: string }>;
     handleShow: (title: string, description: string, imageUrl: string[]) => void;
+    theme: string;
 }
 
-const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleShow }) => {
+const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleShow, theme }) => {
     const filteredProjects = filter === 'All' ? projects : projects.filter(project => project.category === filter);
-
     return (
-        <>
+        <div className={`projects-container ${theme}`}>
             <h2>Projects</h2>
             <Form.Group controlId="projectFilter" className="filter-group">
                 <Form.Label>Filter by Category</Form.Label>
@@ -44,7 +44,7 @@ const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleS
                     </Col>
                 ))}
             </Row>
-        </>
+        </div>
     );
 };
 

@@ -34,7 +34,7 @@ body.dark {
 }
 
 .navbar-collapse {
-    padding: 2px;
+    padding: 4px;
 }
 
 .brand-padding {
@@ -86,6 +86,10 @@ body.dark .logo {
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+.navbar-toggler{
+    margin: 5px;
+}
+
 .nav-link:hover {
     color: #e2e6ea;
     background-color: rgba(0, 0, 0, 0.1);
@@ -100,6 +104,10 @@ body.dark .logo {
 
 @media (max-width: 768px) {
     .nav-link {
+        padding-left: 10px;
+    }
+
+    .navbar-toggler {
         padding-left: 10px;
     }
 }

@@ -25,7 +25,7 @@ const App: React.FC = () => {
   };
 
   const scrollToSection = (section: string) => {
-    const offset = 80;
+    const offset = 85;
     let element: HTMLElement | null = null;
 
     switch (section) {

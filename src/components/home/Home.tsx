@@ -99,8 +99,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
 
             <div className={`home-container ${theme}`}>
                 <Row className="my-4" ref={aboutRef}><Col><About /></Col></Row>
-                <Row className="my-4" ref={projectsRef}><Col><Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} /></Col></Row>
-                <Row className="my-4" ref={experiencesRef}><Col><Experiences /></Col></Row>
+                <Row className="my-4" ref={projectsRef}><Col><Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} theme={theme} /></Col></Row>                <Row className="my-4" ref={experiencesRef}><Col><Experiences /></Col></Row>
                 <Row className="my-4" ref={contactRef}><Col><Contact /></Col></Row>
                 <Row className="my-4" ref={testimoniesRef}><Col><Testimonies /></Col></Row>
             </div>
