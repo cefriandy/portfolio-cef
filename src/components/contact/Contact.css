@@ -2,3 +2,7 @@
     text-align: center;
     padding: 20px;
 }
+
+.message-text {
+    text-align: justify;
+}

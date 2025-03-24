@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { Fade } from 'react-awesome-reveal';
 import './Projects.css';
@@ -12,6 +12,12 @@ interface ProjectProps {
 }
 
 const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleShow, theme }) => {
+    const [expanded, setExpanded] = useState<{ [key: number]: boolean }>({});
+
+    const toggleReadMore = (index: number) => {
+        setExpanded(prevState => ({ ...prevState, [index]: !prevState[index] }));
+    };
+
     const filteredProjects = filter === 'All' ? projects : projects.filter(project => project.category === filter);
     return (
         <div className={`projects-container ${theme}`}>
@@ -32,8 +38,13 @@ const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleS
                                 <Card.Img variant="top" src={project.imageUrl[0]} className="project-image" alt={project.title} onClick={() => handleShow(project.title, project.description, project.imageUrl)} />
                                 <Card.Body>
                                     <Card.Title>{project.title}</Card.Title>
-                                    <Card.Text>
-                                        {project.description}
+                                    <Card.Text className="project-description" style={{ maxHeight: expanded[index] ? 'none' : '150px' }}>
+                                        {expanded[index] ? project.description : `${project.description.substring(0, 100)}...`}
+                                        {project.description.length > 100 && (
+                                            <span className="read-more" onClick={() => toggleReadMore(index)}>
+                                                {expanded[index] ? 'Read Less <<' : 'Read More >>'}
+                                            </span>
+                                        )}
                                     </Card.Text>
                                     <Button variant="primary" onClick={() => handleShow(project.title, project.description, project.imageUrl)}>
                                         Learn More

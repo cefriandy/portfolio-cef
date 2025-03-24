@@ -10,18 +10,18 @@ interface Testimony {
 
 const testimonies: Testimony[] = [
     {
-        name: 'John Doe',
-        position: 'CEO, Company A',
+        name: 'Raihan Dzaky',
+        position: 'Frontend Engineer | FLO Energy',
         message: 'Cefriandy is an exceptional developer. His work on our backend systems has been transformative.'
     },
     {
-        name: 'Jane Smith',
-        position: 'CTO, Company B',
+        name: 'Riki Prambudi',
+        position: 'Frontend Developer | Prudential Indonesia',
         message: 'Working with Cefriandy has been a pleasure. His expertise in Java and Spring Boot is unparalleled.'
     },
     {
-        name: 'Michael Johnson',
-        position: 'Lead Developer, Company C',
+        name: 'N Fikri',
+        position: 'Software Developer, CGV',
         message: 'Cefriandy consistently delivers high-quality code and innovative solutions.'
     }
 ];

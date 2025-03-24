@@ -10,6 +10,7 @@ import Experiences from '../experience/Experiences';
 import Testimonies from '../testimonies/Testimonies';
 import projects from './project-data';
 import Typewriter from '../util/Typewritter';
+import TechStack from './TechStack';
 
 interface HomeProps {
     theme: string;
@@ -51,9 +52,9 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                     <Col md={6} className="text-section">
                         <h1 className="fade-in">Hi There!</h1>
                         <div className="fade-in delay-1">
-                            <Typewriter texts={["I'm Cefriandy Simarmata", "A Backend Java Developer"]} />
+                            <Typewriter texts={["I'm Cefriandy", "A Backend Developer"]} />
                         </div>
-                        <p className="fade-in delay-2">
+                        <p className="fade-in delay-2 message-text">
                             Passionate about crafting high-performance backend systems with Java, Spring Boot, and PostgreSQL.
                         </p>
                         <div className="button-group fade-in delay-3">
@@ -106,51 +107,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
 
             <div className={`bottom-container ${theme}`}>
                 <Row className="my-4">
-                    <Col>
-                        <h2>Tech Stack</h2>
-                        <Row>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-bootstrap" style={{ fontSize: '50px' }}></i>
-                                <p>Bootstrap</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-filetype-tsx" style={{ fontSize: '50px' }}></i>
-                                <p>TypeScript</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-filetype-js" style={{ fontSize: '50px' }}></i>
-                                <p>JavaScript</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-node-plus" style={{ fontSize: '50px' }}></i>
-                                <p>Nest JS</p>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-filetype-java" style={{ fontSize: '50px' }}></i>
-                                <p>Java</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-stars" style={{ fontSize: '50px' }}></i>
-                                <p>Spring Boot</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-person-gear" style={{ fontSize: '50px' }}></i>
-                                <p>Jenkins</p>
-                            </Col>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-coin" style={{ fontSize: '50px' }}></i>
-                                <p>Kubernetes</p>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md={3} className="text-center">
-                                <i className="bi bi-boxes" style={{ fontSize: '50px' }}></i>
-                                <p>Docker</p>
-                            </Col>
-                        </Row>
-                    </Col>
+                    <TechStack />
                 </Row>
             </div>
 
@@ -161,11 +118,15 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                     </Modal.Header>
                     <Modal.Body>
                         <Row>
-                            <Col md={6}>
+                            <Col md={6} className="image-container">
                                 <img src={modalContent?.imageUrl[currentImageIndex]} alt={modalContent?.title} className="modal-image" />
                                 <div className="image-navigation">
-                                    <Button variant="secondary" onClick={handlePrevImage}>&lt;</Button>
-                                    <Button variant="secondary" onClick={handleNextImage}>&gt;</Button>
+                                    {currentImageIndex > 0 && (
+                                        <i className="bi bi-arrow-left-circle left-arrow" onClick={handlePrevImage} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)' }}></i>
+                                    )}
+                                    {currentImageIndex < modalContent?.imageUrl.length - 1 && (
+                                        <i className="bi bi-arrow-right-circle right-arrow" onClick={handleNextImage} style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)' }}></i>
+                                    )}
                                 </div>
                             </Col>
                             <Col md={6}>

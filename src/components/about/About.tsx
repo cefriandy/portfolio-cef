@@ -17,7 +17,7 @@ const About: React.FC = () => {
                 </Col>
             </Row>
             <Row>
-                <Col md={6}>
+                <Col md={6} className="left-align">
                     <ul>
                         <li>
                             I am an experienced Software Engineer with a strong background in Java, TypeScript, Spring, Quarkus, NestJS, and databases like PostgreSQL and MongoDB. I excel in containerization, monitoring, cloud services, and deployment tools (Docker, Dynatrace, GCP(GKE), Jenkins).
@@ -27,7 +27,7 @@ const About: React.FC = () => {
                         </li>
                     </ul>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className="left-align">
                     <ul>
                         <li>
                             I hold a Bachelor's degree in Computer Science from President University.
