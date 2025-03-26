@@ -4,7 +4,7 @@
 }
 
 .projects-container.dark {
-    background-color: #222222;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -15,9 +15,9 @@
 }
 
 .project-card.dark {
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
-    border: 1px solid #444444;
+    border: 1px solid #000000;
 }
 
 .project-description.light {
@@ -54,6 +54,11 @@
     max-height: 150px;
     overflow: hidden;
     position: relative;
+    hyphens: auto;
+    word-spacing: 0.1em;
+    text-justify: inter-word;
+    text-align-last: left;
+    line-height: 1.5;
 }
 
 .read-more {

@@ -15,9 +15,9 @@
 }
 
 .highlight-card.dark {
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
-    border: 1px solid #444444;
+    border: 1px solid #000000;
 }
 
 .home-container.light {
@@ -55,9 +55,9 @@
 }
 
 .project-card.dark {
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
-    border: 1px solid #444444;
+    border: 1px solid #000000;
 }
 
 .projects-container.light {
@@ -66,7 +66,7 @@
 }
 
 .projects-container.dark {
-    background-color: #222222;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -336,6 +336,7 @@
 }
 
 @media (max-width: 768px) {
+
     .left-arrow,
     .right-arrow {
         font-size: 1.5rem;
@@ -347,6 +348,7 @@
 }
 
 @media (max-width: 576px) {
+
     .left-arrow,
     .right-arrow {
         font-size: 1.2rem;
@@ -359,4 +361,9 @@
 
 .message-text {
     text-align: justify;
+    hyphens: auto;
+    word-spacing: 0.1em;
+    text-justify: inter-word;
+    text-align-last: left;
+    line-height: 1.5;
 }

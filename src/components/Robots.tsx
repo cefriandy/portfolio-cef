@@ -4,7 +4,7 @@ import Testimonies from './testimonies/Testimonies';
 const Robots: React.FC = () => {
     return (
         <div data-testid="robot-element">
-            <Testimonies></Testimonies>
+            <Testimonies theme={''}></Testimonies>
         </div>
     );
 };

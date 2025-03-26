@@ -19,9 +19,9 @@
 }
 
 .testimony-card.dark {
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
-    border: 1px solid #444444;
+    border: 1px solid #000000;
 }
 
 .testimonies-container.light {
@@ -30,6 +30,6 @@
 }
 
 .testimonies-container.dark {
-    background-color: #222222;
+    background-color: #000000;
     color: #ffffff;
 }

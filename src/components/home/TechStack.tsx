@@ -1,4 +1,7 @@
 import { Row, Col } from 'react-bootstrap';
+import { FaJava, FaNodeJs, FaReact, FaDocker, FaJenkins, FaWindows, FaLinux, FaGit, FaFileAlt } from 'react-icons/fa';
+import { SiTypescript, SiSpringboot, SiHibernate, SiPostgresql, SiMongodb, SiOracle, SiKubernetes, SiDynatrace, SiGrafana } from 'react-icons/si';
+import { VscSourceControl } from 'react-icons/vsc';
 
 const TechStack = () => {
     return (
@@ -8,23 +11,23 @@ const TechStack = () => {
             <h3>Backend</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-filetype-java" style={{ fontSize: '30px' }}></i>
+                    <FaJava style={{ fontSize: '50px' }} />
                     <p>Java</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-node-plus" style={{ fontSize: '30px' }}></i>
+                    <FaNodeJs style={{ fontSize: '50px' }} />
                     <p>Nest JS</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-filetype-tsx" style={{ fontSize: '30px' }}></i>
+                    <SiTypescript style={{ fontSize: '50px' }} />
                     <p>TypeScript</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-stars" style={{ fontSize: '30px' }}></i>
+                    <SiSpringboot style={{ fontSize: '50px' }} />
                     <p>Spring Boot</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-hammer" style={{ fontSize: '30px' }}></i>
+                    <SiHibernate style={{ fontSize: '50px' }} />
                     <p>Hibernate</p>
                 </Col>
             </Row>
@@ -32,15 +35,15 @@ const TechStack = () => {
             <h3>Frontend</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-filetype-jsx" style={{ fontSize: '30px' }}></i>
+                    <FaReact style={{ fontSize: '50px' }} />
                     <p>React</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-filetype-jsx" style={{ fontSize: '30px' }}></i>
+                    <FaReact style={{ fontSize: '50px' }} />
                     <p>JSX</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-filetype-jsx" style={{ fontSize: '30px' }}></i>
+                    <FaReact style={{ fontSize: '50px' }} />
                     <p>Primefaces</p>
                 </Col>
             </Row>
@@ -48,15 +51,15 @@ const TechStack = () => {
             <h3>Databases</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-database" style={{ fontSize: '30px' }}></i>
+                    <SiMongodb style={{ fontSize: '50px' }} />
                     <p>MongoDB</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-database" style={{ fontSize: '30px' }}></i>
+                    <SiPostgresql style={{ fontSize: '50px' }} />
                     <p>PostgreSQL</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-database" style={{ fontSize: '30px' }}></i>
+                    <SiOracle style={{ fontSize: '50px' }} />
                     <p>Oracle Database</p>
                 </Col>
             </Row>
@@ -64,15 +67,15 @@ const TechStack = () => {
             <h3>Containerization and Deployment</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-boxes" style={{ fontSize: '30px' }}></i>
+                    <FaDocker style={{ fontSize: '50px' }} />
                     <p>Docker</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-person-gear" style={{ fontSize: '30px' }}></i>
+                    <FaJenkins style={{ fontSize: '50px' }} />
                     <p>Jenkins</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-cloud" style={{ fontSize: '30px' }}></i>
+                    <SiKubernetes style={{ fontSize: '50px' }} />
                     <p>GKE / Kubernetes Engine</p>
                 </Col>
             </Row>
@@ -80,11 +83,11 @@ const TechStack = () => {
             <h3>Operating Systems</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-windows" style={{ fontSize: '30px' }}></i>
+                    <FaWindows style={{ fontSize: '50px' }} />
                     <p>Windows</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-linux" style={{ fontSize: '30px' }}></i>
+                    <FaLinux style={{ fontSize: '50px' }} />
                     <p>Linux</p>
                 </Col>
             </Row>
@@ -92,15 +95,15 @@ const TechStack = () => {
             <h3>Monitoring & Reports</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-graph-up" style={{ fontSize: '30px' }}></i>
+                    <SiDynatrace style={{ fontSize: '50px' }} />
                     <p>Dynatrace</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-graph-up" style={{ fontSize: '30px' }}></i>
+                    <SiGrafana style={{ fontSize: '50px' }} />
                     <p>Grafana</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-file-earmark-bar-graph" style={{ fontSize: '30px' }}></i>
+                    <FaFileAlt style={{ fontSize: '50px' }} />
                     <p>Jasper</p>
                 </Col>
             </Row>
@@ -108,11 +111,11 @@ const TechStack = () => {
             <h3>Version Control</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-git" style={{ fontSize: '30px' }}></i>
+                    <FaGit style={{ fontSize: '50px' }} />
                     <p>Git</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <i className="bi bi-git" style={{ fontSize: '30px' }}></i>
+                    <VscSourceControl style={{ fontSize: '50px' }} />
                     <p>SVN</p>
                 </Col>
             </Row>
