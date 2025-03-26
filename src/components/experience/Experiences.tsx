@@ -5,6 +5,7 @@ const experiences = [
     year: 'Feb 2023 - Present',
     title: 'Backend Engineer',
     company: 'NTT Indonesia - Onsite: Prudential Indonesia',
+    location: 'Onsite',
     description: [
       'Develop APIs and database structures to ensure seamless transition from the existing system to the new architecture.',
       'Test the system and troubleshoot any issues that arise during the migration process.',
@@ -16,6 +17,7 @@ const experiences = [
     year: 'Jul 2021 - Feb 2023',
     title: 'Software Developer',
     company: 'NTT Indonesia - Onsite: Prudential Indonesia',
+    location: 'Onsite',
     description: [
       'Developing, testing, and maintaining software applications and systems.',
       'Managing and leading a team of vendor developers.',
@@ -32,6 +34,7 @@ const experiences = [
     year: 'May 2020 - May 2021',
     title: 'Java Developer',
     company: 'Prosia Sistematika',
+    location: 'Remote',
     description: [
       'Developing, testing, and maintaining software applications and systems based on design documents.',
       'Collaborating with cross-functional teams to design and implement new features.',
@@ -48,7 +51,10 @@ const Experiences = () => {
       {experiences.map((exp, index) => (
         <div key={index} className="experience">
           <div className="details">
-            <h3 className="title">{exp.title}</h3>
+            <div className="title-location">
+              <h3 className="title">{exp.title}</h3>
+              <span className="location">{exp.location}</span>
+            </div>
             <h4 className="company">{exp.company}</h4>
             <ul className="description">
               {exp.description.map((item, idx) => (

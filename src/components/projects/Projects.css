@@ -1,3 +1,33 @@
+.projects-container.light {
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+.projects-container.dark {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.project-card.light {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #dddddd;
+}
+
+.project-card.dark {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.project-description.light {
+    color: #000000;
+}
+
+.project-description.dark {
+    color: #ffffff;
+}
+
 .project-image {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

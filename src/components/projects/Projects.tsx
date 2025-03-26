@@ -32,9 +32,9 @@ const Projects: React.FC<ProjectProps> = ({ filter, setFilter, projects, handleS
             </Form.Group>
             <Row>
                 {filteredProjects.map((project, index) => (
-                    <Col md={4} key={index} className={`project-card ${theme}`}>
+                    <Col md={4} key={index}>
                         <Fade triggerOnce>
-                            <Card>
+                            <Card className={`project-card ${theme}`}>
                                 <Card.Img variant="top" src={project.imageUrl[0]} className="project-image" alt={project.title} onClick={() => handleShow(project.title, project.description, project.imageUrl)} />
                                 <Card.Body>
                                     <Card.Title>{project.title}</Card.Title>
