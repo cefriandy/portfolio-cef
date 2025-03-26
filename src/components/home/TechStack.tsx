@@ -1,33 +1,34 @@
 import { Row, Col } from 'react-bootstrap';
-import { FaJava, FaNodeJs, FaReact, FaDocker, FaJenkins, FaWindows, FaLinux, FaGit, FaFileAlt } from 'react-icons/fa';
+import { FaJava, FaNodeJs, FaReact, FaGlobe, FaDocker, FaJenkins, FaWindows, FaLinux, FaGit, FaFileAlt } from 'react-icons/fa';
 import { SiTypescript, SiSpringboot, SiHibernate, SiPostgresql, SiMongodb, SiOracle, SiKubernetes, SiDynatrace, SiGrafana } from 'react-icons/si';
 import { VscSourceControl } from 'react-icons/vsc';
+import 'primeicons/primeicons.css';
 
 const TechStack = () => {
     return (
         <div>
             <h2>Tech Stack</h2>
-            
+
             <h3>Backend</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <FaJava style={{ fontSize: '50px' }} />
+                    <FaJava style={{ fontSize: '35px' }} />
                     <p>Java</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaNodeJs style={{ fontSize: '50px' }} />
+                    <FaNodeJs style={{ fontSize: '35px' }} />
                     <p>Nest JS</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiTypescript style={{ fontSize: '50px' }} />
+                    <SiTypescript style={{ fontSize: '35px' }} />
                     <p>TypeScript</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiSpringboot style={{ fontSize: '50px' }} />
+                    <SiSpringboot style={{ fontSize: '35px' }} />
                     <p>Spring Boot</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiHibernate style={{ fontSize: '50px' }} />
+                    <SiHibernate style={{ fontSize: '35px' }} />
                     <p>Hibernate</p>
                 </Col>
             </Row>
@@ -35,31 +36,31 @@ const TechStack = () => {
             <h3>Frontend</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <FaReact style={{ fontSize: '50px' }} />
+                    <FaReact style={{ fontSize: '35px' }} />
                     <p>React</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaReact style={{ fontSize: '50px' }} />
-                    <p>JSX</p>
+                    <i className="pi pi-prime" style={{ fontSize: '35px' }}></i>
+                    <p>Primefaces</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaReact style={{ fontSize: '50px' }} />
-                    <p>Primefaces</p>
+                    <FaGlobe style={{ fontSize: '35px' }} />
+                    <p>JSF</p>
                 </Col>
             </Row>
 
             <h3>Databases</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <SiMongodb style={{ fontSize: '50px' }} />
+                    <SiMongodb style={{ fontSize: '35px' }} />
                     <p>MongoDB</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiPostgresql style={{ fontSize: '50px' }} />
+                    <SiPostgresql style={{ fontSize: '35px' }} />
                     <p>PostgreSQL</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiOracle style={{ fontSize: '50px' }} />
+                    <SiOracle style={{ fontSize: '35px' }} />
                     <p>Oracle Database</p>
                 </Col>
             </Row>
@@ -67,15 +68,15 @@ const TechStack = () => {
             <h3>Containerization and Deployment</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <FaDocker style={{ fontSize: '50px' }} />
+                    <FaDocker style={{ fontSize: '35px' }} />
                     <p>Docker</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaJenkins style={{ fontSize: '50px' }} />
+                    <FaJenkins style={{ fontSize: '35px' }} />
                     <p>Jenkins</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiKubernetes style={{ fontSize: '50px' }} />
+                    <SiKubernetes style={{ fontSize: '35px' }} />
                     <p>GKE / Kubernetes Engine</p>
                 </Col>
             </Row>
@@ -83,11 +84,11 @@ const TechStack = () => {
             <h3>Operating Systems</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <FaWindows style={{ fontSize: '50px' }} />
+                    <FaWindows style={{ fontSize: '35px' }} />
                     <p>Windows</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaLinux style={{ fontSize: '50px' }} />
+                    <FaLinux style={{ fontSize: '35px' }} />
                     <p>Linux</p>
                 </Col>
             </Row>
@@ -95,15 +96,15 @@ const TechStack = () => {
             <h3>Monitoring & Reports</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <SiDynatrace style={{ fontSize: '50px' }} />
+                    <SiDynatrace style={{ fontSize: '35px' }} />
                     <p>Dynatrace</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <SiGrafana style={{ fontSize: '50px' }} />
+                    <SiGrafana style={{ fontSize: '35px' }} />
                     <p>Grafana</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <FaFileAlt style={{ fontSize: '50px' }} />
+                    <FaFileAlt style={{ fontSize: '35px' }} />
                     <p>Jasper</p>
                 </Col>
             </Row>
@@ -111,11 +112,11 @@ const TechStack = () => {
             <h3>Version Control</h3>
             <Row>
                 <Col md={3} className="text-center">
-                    <FaGit style={{ fontSize: '50px' }} />
+                    <FaGit style={{ fontSize: '35px' }} />
                     <p>Git</p>
                 </Col>
                 <Col md={3} className="text-center">
-                    <VscSourceControl style={{ fontSize: '50px' }} />
+                    <VscSourceControl style={{ fontSize: '35px' }} />
                     <p>SVN</p>
                 </Col>
             </Row>
