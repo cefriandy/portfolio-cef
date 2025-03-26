@@ -26,14 +26,18 @@ const testimonies: Testimony[] = [
     }
 ];
 
-const Testimonies: React.FC = () => {
+interface TestimoniesProps {
+    theme: string;
+}
+
+const Testimonies: React.FC<TestimoniesProps> = ({ theme }) => {
     return (
-        <div className="testimonies-container">
+        <div className={`testimonies-container ${theme}`}>
             <h2 className="section-title">Testimonials</h2>
             <Row>
                 {testimonies.map((testimony, index) => (
                     <Col md={4} key={index}>
-                        <Card className="testimony-card">
+                        <Card className={`testimony-card ${theme}`}>
                             <Card.Body>
                                 <Card.Title>{testimony.name}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">{testimony.position}</Card.Subtitle>

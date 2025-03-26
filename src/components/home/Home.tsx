@@ -75,21 +75,21 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="highlight-card">
+                        <Card className={`highlight-card ${theme}`}>
                             <Card.Body>
                                 <h4>15+ Scalable APIs</h4>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="highlight-card">
+                        <Card className={`highlight-card ${theme}`}>
                             <Card.Body>
                                 <h4>Expert in Java, Spring Boot</h4>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={3}>
-                        <Card className="highlight-card">
+                        <Card className={`highlight-card ${theme}`}>
                             <Card.Body>
                                 <h4>Worked with Top Companies</h4>
                             </Card.Body>
@@ -100,9 +100,10 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
 
             <div className={`home-container ${theme}`}>
                 <Row className="my-4" ref={aboutRef}><Col><About /></Col></Row>
-                <Row className="my-4" ref={projectsRef}><Col><Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} theme={theme} /></Col></Row>                <Row className="my-4" ref={experiencesRef}><Col><Experiences /></Col></Row>
+                <Row className="my-4" ref={projectsRef}><Col><Projects filter={filter} setFilter={setFilter} projects={projects} handleShow={handleShow} theme={theme} /></Col></Row>
+                <Row className="my-4" ref={experiencesRef}><Col><Experiences /></Col></Row>
                 <Row className="my-4" ref={contactRef}><Col><Contact /></Col></Row>
-                <Row className="my-4" ref={testimoniesRef}><Col><Testimonies /></Col></Row>
+                <Row className="my-4" ref={testimoniesRef}><Col><Testimonies theme={theme} /></Col></Row>
             </div>
 
             <div className={`bottom-container ${theme}`}>

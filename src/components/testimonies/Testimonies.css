@@ -5,9 +5,31 @@
 
 .section-title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .testimony-card {
     margin-bottom: 1.5rem;
+}
+
+.testimony-card.light {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #dddddd;
+}
+
+.testimony-card.dark {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.testimonies-container.light {
+    background-color: #f9f9f9;
+    color: #000000;
+}
+
+.testimonies-container.dark {
+    background-color: #222222;
+    color: #ffffff;
 }
