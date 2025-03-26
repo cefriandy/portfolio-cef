@@ -55,7 +55,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                             <Typewriter texts={["I'm Cefriandy", "A Backend Developer"]} />
                         </div>
                         <p className="fade-in delay-2 message-text">
-                            Passionate about crafting high-performance backend systems with Java, Spring Boot, and PostgreSQL.
+                            Passionate about crafting high-performance backend systems with Java or TypeScript.
                         </p>
                         <div className="button-group fade-in delay-3">
                             <Button variant="outline-primary" onClick={() => scrollToSection('Contact')}>Hire Me</Button>
@@ -68,7 +68,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                 </Row>
                 <Row className="highlights-section fade-in">
                     <Col md={3}>
-                        <Card className="highlight-card">
+                        <Card className={`highlight-card ${theme}`}>
                             <Card.Body>
                                 <h4>5+ Years Experience</h4>
                             </Card.Body>
@@ -131,7 +131,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
                             </Col>
                             <Col md={6}>
                                 <h4>{modalContent?.title}</h4>
-                                <p>{modalContent?.description}</p>
+                                <p className={`description-dark ${theme}`}>{modalContent?.description}</p>
                             </Col>
                         </Row>
                     </Modal.Body>

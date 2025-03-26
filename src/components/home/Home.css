@@ -328,3 +328,23 @@
 .message-text {
     text-align: justify;
 }
+
+.description-dark.light {
+    color: dark;
+}
+
+.description-dark.dark {
+    color: black;
+}
+
+.highlight-card.light {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #dddddd;
+}
+
+.highlight-card.dark {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
