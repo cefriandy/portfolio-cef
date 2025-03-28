@@ -15,9 +15,9 @@
 }
 
 .highlight-card.dark {
-    background-color: #000000;
+    background-color: #282828;
     color: #ffffff;
-    border: 1px solid #000000;
+    border: 1px solid #252525;
 }
 
 .home-container.light {
@@ -114,9 +114,11 @@
     width: auto;
     height: 100%;
     max-height: 100vh;
-    border-radius: 0;
+    border-radius: 15px;
+    /* Smooth edges */
     border: none;
-    box-shadow: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+    /* Soft edge blending */
 }
 
 .custom-select {
@@ -362,8 +364,13 @@
 .message-text {
     text-align: justify;
     hyphens: auto;
-    word-spacing: 0.1em;
     text-justify: inter-word;
     text-align-last: left;
     line-height: 1.5;
+}
+
+.custom-modal-content .modal-content {
+    background-color: black;
+    color: white;
+    /* Optional: to ensure text is visible */
 }

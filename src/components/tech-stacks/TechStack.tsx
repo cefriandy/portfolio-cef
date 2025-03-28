@@ -3,13 +3,14 @@ import { FaJava, FaNodeJs, FaReact, FaGlobe, FaDocker, FaJenkins, FaWindows, FaL
 import { SiTypescript, SiSpringboot, SiHibernate, SiPostgresql, SiMongodb, SiOracle, SiKubernetes, SiDynatrace, SiGrafana } from 'react-icons/si';
 import { VscSourceControl } from 'react-icons/vsc';
 import 'primeicons/primeicons.css';
+import './TechStack.css'
 
 const TechStack = () => {
     return (
         <div>
             <h2>Tech Stack</h2>
 
-            <h3>Backend</h3>
+            <h3 className="tech-title">Backend</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <FaJava style={{ fontSize: '35px' }} />
@@ -33,7 +34,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Frontend</h3>
+            <h3 className="tech-title">Frontend</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <FaReact style={{ fontSize: '35px' }} />
@@ -49,7 +50,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Databases</h3>
+            <h3 className="tech-title">Databases</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <SiMongodb style={{ fontSize: '35px' }} />
@@ -65,7 +66,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Containerization and Deployment</h3>
+            <h3 className="tech-title">Containerization and Deployment</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <FaDocker style={{ fontSize: '35px' }} />
@@ -81,7 +82,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Operating Systems</h3>
+            <h3 className="tech-title">Operating Systems</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <FaWindows style={{ fontSize: '35px' }} />
@@ -93,7 +94,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Monitoring & Reports</h3>
+            <h3 className="tech-title">Monitoring & Reports</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <SiDynatrace style={{ fontSize: '35px' }} />
@@ -109,7 +110,7 @@ const TechStack = () => {
                 </Col>
             </Row>
 
-            <h3>Version Control</h3>
+            <h3 className="tech-title">Version Control</h3>
             <Row>
                 <Col md={3} className="text-center">
                     <FaGit style={{ fontSize: '35px' }} />

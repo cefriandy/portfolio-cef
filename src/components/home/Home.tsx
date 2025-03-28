@@ -10,7 +10,7 @@ import Experiences from '../experience/Experiences';
 import Testimonies from '../testimonies/Testimonies';
 import projects from './project-data';
 import Typewriter from '../util/Typewritter';
-import TechStack from './TechStack';
+import TechStack from '../tech-stacks/TechStack';
 
 interface HomeProps {
     theme: string;
@@ -113,7 +113,7 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
             </div>
 
             {modalContent && (
-                <Modal show={show} onHide={handleClose}>
+                <Modal show={show} onHide={handleClose} dialogClassName="custom-modal-content">
                     <Modal.Header closeButton>
                         <Modal.Title>{modalContent?.title}</Modal.Title>
                     </Modal.Header>

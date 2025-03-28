@@ -15,7 +15,7 @@
 }
 
 .project-card.dark {
-    background-color: #000000;
+    background-color: #353434;
     color: #ffffff;
     border: 1px solid #000000;
 }
@@ -55,7 +55,6 @@
     overflow: hidden;
     position: relative;
     hyphens: auto;
-    word-spacing: 0.1em;
     text-justify: inter-word;
     text-align-last: left;
     line-height: 1.5;

@@ -25,7 +25,6 @@
 .left-align {
     text-align: justify;
     hyphens: auto;
-    word-spacing: 0.1em;
     text-justify: inter-word;
     text-align-last: left;
     line-height: 1.5;

@@ -20,7 +20,7 @@ const About: React.FC = () => {
                 <Col md={6} className="left-align">
                     <ul>
                         <li>
-                            I am an experienced Software Engineer with a strong background in Java, TypeScript, Spring, Quarkus, NestJS, and databases like PostgreSQL and MongoDB. I excel in containerization, monitoring, cloud services, and deployment tools (Docker, Dynatrace, GCP(GKE), Jenkins).
+                        I am an experienced Software Engineer with a strong background in Java, TypeScript, Spring, Quarkus, NestJS, and databases like PostgreSQL and MongoDB. I excel in containerization, monitoring, cloud services, and deployment tools (Docker, Dynatrace, GCP(GKE), Jenkins).
                         </li>
                         <li>
                             Throughout my career, I have successfully led multiple projects, including PRUForce Web. My ability to collaborate effectively with cross-functional teams and solve complex problems has been key to my success.
