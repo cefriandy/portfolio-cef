@@ -48,14 +48,14 @@ const Home: React.FC<HomeProps> = ({ theme, topRef, aboutRef, projectsRef, exper
     return (
         <>
             <div className={`welcome-container ${theme}`} ref={topRef}>
-                <Row className="my-4 top-section animated-background">
+                <Row className="my-4 top-section animated-background" style={{ height: '100%' }}>
                     <Col md={6} className="text-section">
                         <h1 className="fade-in">Hi There!</h1>
                         <div className="fade-in delay-1">
                             <Typewriter texts={["I'm Cefriandy", "A Backend Developer"]} />
                         </div>
-                        <p className="fade-in delay-2 message-text">
-                            Passionate about crafting high-performance backend systems with Java or TypeScript.
+                        <p className={`fade-in delay-2 message-text ${theme}`}>
+                            Passionate about crafting high-performance backend systems with Java/TypeScript.
                         </p>
                         <div className="button-group fade-in delay-3">
                             <Button variant="outline-primary" onClick={() => scrollToSection('Contact')}>Hire Me</Button>
